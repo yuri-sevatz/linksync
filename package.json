@@ -1,0 +1,42 @@
+{
+  "title": "LinkSync",
+  "name": "linksync",
+  "version": "0.0.1",
+  "description": "Firefox Toolbar Indicator for Remote URL Synchronization",
+  "main": "index.js",
+  "author": "Yuri Sevatz",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "preferences": [
+  {
+    "name": "rest",
+    "title": "UrlSync Server",
+    "description": "REST Server Address",
+    "type": "string",
+    "value": "http://localhost:8080/api/"
+  },
+  {
+    "name": "get",
+    "title": "REST Select Route",
+    "description": "Performs a SELECT via POST id=x, and return the {\"count\":n} of matching rows",
+    "type": "string",
+    "value": "get"
+  },
+  {
+    "name": "add",
+    "title": "REST Insert Route",
+    "description": "Performs a INSERT via POST id=x, and return the {\"count\":n} of affected rows",
+    "type": "string",
+    "value": "add"
+  },
+  {
+    "name": "del",
+    "title": "REST Delete Route",
+    "description": "Performs a DELETE via POST id=x, and return the {\"count\":n} of affected rows",
+    "type": "string",
+    "value": "del"
+  }]
+}
